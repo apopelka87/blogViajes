@@ -10,6 +10,9 @@ html {
     box-sizing: inherit;
 }
 
+
+/** Globales **/
+
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -31,6 +34,40 @@ p {
     max-width: 1200px;
     margin: 0 auto;
     overflow: auto;
+}
+
+
+/** Navegacion Responsive**/
+
+.barra {
+    overflow: hidden;
+}
+
+.mobile-menu {
+    color: #ffffff;
+    font-size: 2rem;
+    text-align: center;
+    display: block;
+    padding: 20px 0;
+}
+
+#navegacion:target {
+    max-height: 800px;
+}
+
+.navegacion-principal {
+    max-height: 0;
+    transition: .5s;
+}
+
+@media (min-width: 768px) {
+    .navegacion-principal {
+        max-height: unset;
+    }
+    .mobile-menu,
+    .cerrar {
+        display: none!important;
+    }
 }
 
 
